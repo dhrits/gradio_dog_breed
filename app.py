@@ -14,4 +14,4 @@ def process(img):
 app = gr.Interface(fn=process, inputs=['image'], outputs=['image'], description='Take or upload the image of a dog to detect breed')
 
 if __name__ == '__main__':
-    app.launch()
+    app.launch(share=True)
