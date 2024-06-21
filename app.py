@@ -4,7 +4,7 @@ from PIL import Image
 import os
 #import neptune
 
-NEPTUNE_KEY = os.get_env['NEPTUNE_KEY']
+NEPTUNE_KEY = os.getenv('NEPTUNE_KEY')
 run = neptune.init_run(
     project="dhrits/dog-breed-id",
     api_token=NEPTUNE_KEY,
