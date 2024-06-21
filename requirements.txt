@@ -60,4 +60,4 @@ gradio
 git+https://github.com/ppwwyyxx/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI
 git+https://github.com/dhrits/course22p2
 git+https://github.com/dhrits/dog_breed_id.git@5298edcab974b0f8128e9ad74f97113a47bf7640
-
+neptune
