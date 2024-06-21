@@ -2,7 +2,7 @@ from dog_breed_id.inference import *
 import gradio as gr
 from PIL import Image
 import os
-#import neptune
+import neptune
 
 NEPTUNE_KEY = os.getenv('NEPTUNE_KEY')
 run = neptune.init_run(
