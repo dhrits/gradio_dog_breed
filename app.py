@@ -4,18 +4,18 @@ from PIL import Image
 import os
 #import neptune
 
-#NEPTUNE_KEY = os.environ['NEPTUNE_KEY']
-#run = neptune.init_run(
-#    project="dhrits/dog-breed-id",
-#    api_token=NEPTUNE_KEY,
-#)
+NEPTUNE_KEY = os.get_env['NEPTUNE_KEY']
+run = neptune.init_run(
+    project="dhrits/dog-breed-id",
+    api_token=NEPTUNE_KEY,
+)
 detector = DogBreedDetector('resnet50.pt', 'model-fasterrcnn.cuda.pt', 'id2labels.json', 'label2id.json')
 
 def process(img):
     img = Image.fromarray(img)
     preds = detector(img)
     label, confidence, box = preds
-    #run['confidence'].append(confidence)
+    run['confidence'].append(confidence)
     label = label.replace('_', ' ').capitalize()
     annotation = annotate_prediction(img, preds)
     return annotation, label, confidence
@@ -29,4 +29,4 @@ app = gr.Interface(
 if __name__ == '__main__':
     app.launch(share=True)
 
-#run.stop()
+run.stop()
