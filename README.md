@@ -1,4 +1,7 @@
----
+## Gradio App for Dog Breed Id
+This project is based on the core [dog_breed_id](https://github.com/dhrits/dog_breed_id) project. It contains code to wrap and deploy the app/API server to [Huggingface Spaces](https://huggingface.co/spaces) using [Gradio](https://www.gradio.app/) ML/Web framework.
+
+--[]
 title: Dog Breed Id
 emoji: 🚀
 colorFrom: red
